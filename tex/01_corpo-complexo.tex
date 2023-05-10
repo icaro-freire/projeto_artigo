@@ -1,0 +1,105 @@
+% Seção 01: O Corpo Complexo ===============================================
+
+\section{O Corpo dos Números Complexos}
+\label{sec:corpo}
+
+Definir o Conjunto dos Números Complexos, inicialmente, por 
+\[
+  \mathbb{C} = \left\{\, a + bi; \; a,b \in \mathbb{R} \text{ e } i^2 = -1 \,\right\},
+\]
+pode esconter algumas coisas fundamentais no entendimento desse novo conjunto. 
+Afinal\ldots\ 
+Seria essa soma entre $a$ e $bi$ é usual?
+O que significa $i^2 = -1$?
+Como você explicaria o seguinte Paradoxo?
+
+\begin{paradoxo}
+  Considerando, $ i^2 = -1$, temos:
+  \[
+    -1 = i^2 = i \cdot i = \sqrt{-1}\cdot \sqrt{-1} = \sqrt{(-1)(-1)} = \sqrt{1} = 1
+  \]
+Portanto, $-1 = 1$?
+\end{paradoxo}
+
+Mas, como Gauss já dizia: \textit{Na Matemática não existem controvérsias verdadeitas}! 
+
+Faz-se necessário uma formalização na definição dos números complexos. 
+
+\subsection{Formalizando as coisas} %---------------------------------------
+
+Precisamos entender os Númetos Complexos não como uma ``sacola de números'', mas 
+como uma ``corpo de números'', ou seja, um conjunto com uma estrutura algébrica 
+associada, preferencialmente já conhecida.
+
+Hamilton, matemático, físico e astrónomo irlandês, foi que trouxe uma definição 
+adequada aos números complexos, sendo adotada até os dias atuais. 
+Nela vê-se o conjunto dos números complexos como um conjunto de pares ordenados 
+munidos com as operações de soma e produdo, este último bem peculiar, mas que 
+oferece subsídios para verificar que essa estrutura é um Corpo. 
+
+
+\begin{proposicao}
+  Considere o subconjunto $\mathcal{C} \subset \mathbb{R}^2$, não vazio, munido 
+  das seguintes operações de \textsf{soma} e \textsf{produdo}, dadas por 
+  \[
+    \begin{array}{rcc}
+      + \colon \mathcal{C}\times \mathcal{C} & \to & \mathcal{C} \\
+       (x, y) & \mapsto & x + y 
+    \end{array}
+    \quad 
+    \text{ e }
+    \quad 
+    \begin{array}{rcc}
+      \cdot \colon \mathcal{C}\times \mathcal{C} & \to & \mathcal{C} \\
+       (x, y) & \mapsto & x \cdot y 
+    \end{array}
+  \]
+  Então, são satisfeitas as seguintes condições, para $z,w,t \in \mathbb{C}$:
+
+  \begin{enumerate}
+      \item[(i)] $z + (w + t) = (z + w) + t$
+      \item[(ii)] $z + w = w + z$
+      \item[(iii)] $ \exists\ 0 \in \mathcal{C}$, tal que $z + 0 = z$
+      \item[(iv)] $ \exists\ -z \in \mathcal{C}$, tal que $ z + (-z) = 0 $
+      \item[(v)] $z(wt) = (zw)t$
+      \item[(vi)] $zw = wz$
+      \item[(vii)] $ \exists\ 1 \in \mathcal{C} $, tal que $z \cdot 1 = z$, $\forall z$
+      \item[(viii)] $ \exists\ z^{-1} \in \mathcal{C}$, tal que $z\cdot z^{-1} = 1$, para todo $z \neq 0$
+      \item[(ix)] $ z (w + t) = zw + zt  $
+  \end{enumerate}  
+\end{proposicao}
+
+\begin{definicao}[Corpo dos Números Complexos]
+  A esse conjunto $\mathcal{C}$, definido acima, denominamos \textsf{Corpo dos Números Complexos} e 
+  será denotado por $\mathbb{C}$.
+\end{definicao}
+
+\begin{obs}
+  É possível mostrar algumas identificaçãos, tais como 
+  \begin{enumerate}
+    \item $ (x, 0) \sim x $
+    \item $ (0, 1)^2 = -1 $
+    \item $ (0, y) \sim yi $
+  \end{enumerate}
+  Assim, um número complexo $ z = (x, y) $, pode ser identificado por 
+  \begin{align}
+    z &= (x, y) \notag\\
+      &= (x, 0) + (0, y) \notag \\
+      &= x + yi \label{eq:algebrica}
+  \end{align}
+\end{obs}
+
+Dizemos que \eqref{eq:algebrica} está na \textbf{Forma Algébrica}. 
+
+\subsection{Representação Matricial} %--------------------------------------
+
+Também é possível representar um número complexo $ z = a + bi $, na forma 
+\textbf{Matricial}: 
+\[
+  z = 
+  \begin{bmatrix}
+    a & -b \\
+    b &  a
+  \end{bmatrix}
+\]
+

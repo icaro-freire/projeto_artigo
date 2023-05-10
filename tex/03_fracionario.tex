@@ -1,0 +1,101 @@
+% Sec 3: Cálculo Fracionário
+
+\section{Cálculo Fracionário} % (fold)
+\label{sec:fracionario}
+
+\subsection{Derivada Fracionária} %-----------------------------------------
+
+Você sabe que se $ f \colon X \to \mathbb{R} $ e $ a \in X \cap X^{\prime} $, 
+a \textbf{derivada} da função $f$ no ponto $a$ é o limite:
+
+\[
+  f^{\prime}(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+\]
+
+Usamos a notação $f^{n}(a)$ para a $n$-ésima derivada da função $f$. 
+Quando existe $f^{n}(x)$ para todo $x\in I$, sendo $I$ um intervalo, dizemos que 
+a função $f\colon I \to \mathbb{R}$ é \textit{n-vezes derivável no intervalo} $I$. 
+
+A Tabela~\ref{tab:derivadas} lembra-nos de algumas derivadas notáveis
+
+\begin{table}[!htbp]
+  \centering
+  \caption{Tabela de Derivadas}
+  \label{tab:derivadas}
+  \begin{tblr}{cc}
+    \hline[1.6pt]
+      $ f(x) $       &   $ f^\prime(x) $ \\
+    \hline[0.8pt]    
+      $ e^x $        &   $ e^x $ \\
+      $ a^x $        &   $ a^x \ln{(a)} $ \\
+      $ \arcsen{x} $ &   $ \frac{ 1 }{ \sqrt{1 - x^2} }\,\mathrm{d}x $ \\
+    \hline[1.6pt]    
+  \end{tblr}
+\end{table}
+
+O \textsf{\textbf{Cálculo Fracionário}} é uma área da Matemática que foi idealizada 
+quando tentou-se generalizar a ideia da derivada para uma ordem \textit{arbitrária}, 
+não apenas inteira. 
+
+Você já imaginou uma derivada como $f^{1/2}(x)$? 
+Ou, mais surpreendente: $f^{\sqrt{\pi}}(x)$??
+Ou, absurda e mais surpreendente: $f^{2 + 3i}(z)$???
+
+Pois é \ldots\ muitas definições surgiram ao longo da história, mas vou exibir 
+uma formulação de Riemann-Liouville. 
+
+\begin{definicao}[Derivada de Riemann-Liouville em intervalo finito]
+  Uma das derivadas, em um intervalo fnito, de Riemann-Liouville, 
+  $ D_{a^{+}}^{\alpha} f $, de ordem $ \alpha \in \mathbb{C} $ com 
+  $\textrm{Re}(\alpha) \geq 0$ e $ \alpha \not \in \mathbb{N}$, é definida por:
+  \begin{equation}
+    \left(D_{a^{+}}^{\alpha}f\right)(x) = 
+    \frac{1}{\Gamma(n - \alpha)}
+    \left(
+      \frac{\mathrm{d}}{\mathrm{d}x}
+    \right)^{n} 
+    \int_{a}^{x} 
+    \frac
+    { 
+      f(t)\, \mathrm{d}t
+    }
+    {
+      (x - t)^{\alpha - n + 1}
+    }
+  \end{equation}
+com $ n = \left[\textrm{Re}(\alpha)\right] + 1 $ e $ x > a $, sendo 
+$ \left[\textrm{Re}(\alpha)\right] $ é a parte inteira de \textrm{Re}(\alpha) e 
+\[
+  \Gamma(z) = \int_{0}^{\infty} t^{z - 1} e^{-t}\, \mathrm{d}t,
+\]
+com $\textrm{Re}(z) > 0$.
+\end{definicao}
+
+Sei que é complicado!
+Mas, pior, é uma análise morfossintática, não?  
+
+\subsection{Funções de Mittag-Leffler}
+
+Uma função, denotada por $E_{\alpha}(z)$, possui papel relevante nos estudos 
+do Cálculo Fracionário. 
+Isto porque, podemos interpretá-la como uma generalização da função exponencial. 
+
+\begin{definicao}[Função de Mittag-Leffler]
+  A função de Mittag-Leffler, $E_{\alpha}(z)$, é uma função complexa que depende 
+  de um parâmetro complexo $\alpha$, sendo $ \textrm{Re}(z) > 0 $, é dada pela 
+  série de potências:
+  \[
+    E_{\alpha}(z) = \sum_{k = 0}^{\infty} \frac{z^k}{\Gamma(\alpha k + 1)}
+  \]
+\end{definicao}
+
+Note que, se você demonstrar a igualdade $\Gamma(k + 1) = k!$, você perceberá 
+a ideia da generalização da exponencial; pois, para $ \alpha = 1 $, temos:
+
+\begin{align*}
+  E_{1}(z) &= \sum_{k = 0}^{\infty} \frac{z^k}{\Gamma(k + 1)} \\
+           &= \sum_{k = 0}^{\infty} \frac{z^k}{k!} \\
+           &= e^{z}
+\end{align*}
+
+Se deseja conhecer mais sobre o Cálculo Fracionário, veja \textcite{fracionario}.

@@ -1,0 +1,47 @@
+% fontes e cia
+\usepackage{euler}
+\usepackage{fontspec}
+\usepackage{libertine}
+
+% idioma
+\usepackage[brazilian]{babel}
+
+% margem
+\usepackage[a4paper]{geometry}
+
+% protusão 
+\usepackage{microtype}
+
+% math 
+\usepackage{amsmath, amsthm, amssymb}
+
+% figutas, tabelas, seções, etc
+\usepackage{tabularray}
+\usepackage{graphicx}
+  \graphicspath{{./figs}}
+\usepackage[font = {small, sf}, labelfont = {bf, sf}]{caption}
+\usepackage{sectsty}
+  \allsectionsfont{\sffamily}
+
+% referências bibliográficas
+\usepackage[style=abnt, justify]{biblatex}
+  \addbibresource{bib/referencias.bib}
+
+% metadados
+\usepackage{hyperref}
+  \hypersetup{%
+    colorlinks  = true, 
+    linkcolor   = blue, 
+    urlcolor    = blue, 
+    citecolor   = blue,
+    pdfproducer = {LuaLaTeX},
+    pdfcreator  = {LaTeX2e com neovim e arara},
+    pdftitle    = {Artigo Genérico Isento de Sentido}, 
+    pdfauthor   = {Fulano de Tal},
+    pdfsubject  = {Estudo Dirigido para aprendizagem do LaTeX}, 
+    pdfkeywords = {tex, latex, math}
+  }
+
+% numeração de ata
+\usepackage{lineno}
+%  \linenumbers

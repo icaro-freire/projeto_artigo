@@ -1,0 +1,33 @@
+% configurações do título ---------------------------------------------->>
+\title{%
+  \sffamily \bfseries
+  Artigo Genérico Isento de Sentido
+}
+\author{%
+  \sffamily 
+  Fulano de Tal \thanks{fulantal@email.com}
+}
+\date{%
+  \sffamily
+  \today
+}
+%-----------------------------------------------------------------------<<
+
+% ambientes matemáticos ------------------------------------------------>>
+\theoremstyle{plain}
+  \newtheorem{teorema}{\sffamily Teorema}[section]
+  \newtheorem{corolario}{\sffamily Corolário}[teorema]
+  \newtheorem{proposicao}{\sffamily Proposição}[section]
+\theoremstyle{definition}
+  \newtheorem{definicao}{\sffamily Definição}[section]
+  \newtheorem{exemplo}{\sffamily Exemplo}
+  \newtheorem{lema}{\sffamily Lema}[section]
+\theoremstyle{remark}
+  \newtheorem{obs}{\sffamily Observação}
+  \newtheorem*{paradoxo}{\sffamily Paradoxo de Bernouli}
+%-----------------------------------------------------------------------<<
+
+% novos operadores ----------------------------------------------------->>
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\arcsen}{arcsen}
+%-----------------------------------------------------------------------<<

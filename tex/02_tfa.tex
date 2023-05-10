@@ -1,0 +1,53 @@
+% Sec 2: TFA 
+
+\section{Teorema Fundamental da Álgebra}
+\label{sec:TFA}
+
+Na Seção~\ref{sec:corpo}, vimos qualquer coisa sobre números complexos. 
+Então, nessa seção, demonstraremos o \textsf{Teorema Fundamental da Álgebra} (TFA). 
+Nunca escreva uma introdução de seção dessa forma!
+
+Para a demonstação do \textsf{TFA} precisaríamos de todo um curso de Variáveis Complexas. 
+Mas, como não é possível isso, considere que $\mathbb{C}[z]$ seja o conjunto dos 
+polinômios complexos. 
+Também vou considerear que você acreditará nos lemas seguintes:
+
+\begin{lema}\label{lema:minimo}
+  Seja $ f(z) \in \mathbb{C}[z] $. 
+  Então, $ \vert f(z) \vert $ atinge um valor mínimo em algum ponto $ z_0 \in \mathbb{C} $
+\end{lema}
+
+\begin{lema}\label{lema:naoMinimo}
+  Suponha que $ f(z) \in \mathbb{C}[z] $, sendo $ f(z) $ não constante. 
+  Se $ f(z_0) \neq 0 $, então $ \vert f(z_0) \vert $ não é o valor mínimo de 
+  $ \vert f(z) \vert $. 
+\end{lema}
+
+\begin{teorema}[Teorema Fundamental da Álgebra]
+  Se $ f(z) \in \mathbb{C}[z] $, com $ f(z) $ não constante; então $ f(z) $ 
+  possui, pelo menos, uma raíz complexa.
+\end{teorema}
+
+\begin{proof}[Demonstração.]
+  Considere $ f(z) $ um polinômio complexo não constante. 
+  Pelo Lema~\ref{lema:minimo}, $ \vert f(z) \vert $ atinge um valor mínimo em 
+  algum ponto $ z_0 \in \mathbb{C} $. 
+  Então, pelo Lema~\ref{lema:naoMinimo}, segue-se que $ f(z_0) = 0 $; pois, 
+  caso contrário, não seria o valor mínimo. 
+  Portanto, $ f(z) $ possui uma raíz complexa. 
+\end{proof}
+
+Quantos anos você possui?
+O que tens feito da vida até aqui? 
+Pois saiba que Gauss demonstrou esse teorema\footnote{
+  não foi a demonstração acima, mas uma outra com as ferramentas disponíveis à época
+} aos 18 anos de idade, em sua tese de doutorado! 
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.3\linewidth]{leGauss}
+  \caption{Gauss dando Legal}
+  \label{fig:leGauss}
+\end{figure}
+
+Para mais detalhes, veja \textcite{TFA}

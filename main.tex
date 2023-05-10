@@ -1,0 +1,30 @@
+% arara: lualatex
+% arara: biber
+% arara: lualatex
+% arara: lualatex if found('log', 'undefined references')
+
+% classe do documento ----------------------------------------------------
+\documentclass[12pt]{article}
+
+\input{configs/pacotes.sty}
+\input{configs/ajustes.sty}
+
+% início do documento ====================================================
+\begin{document}
+%-----------------------------------------------------------------------
+  \maketitle
+%
+  \input{tex/00_resumo.tex}
+%
+  \tableofcontents
+%
+  \input{tex/01_corpo-complexo.tex}
+  \input{tex/02_tfa.tex}
+  \input{tex/03_fracionario.tex}
+%
+  \nocite{*}
+  \printbibliography
+%
+%-----------------------------------------------------------------------
+\end{document}
+%=========================================================================
